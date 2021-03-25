@@ -1,0 +1,103 @@
+/* -------------------------Media queries for Tablets --------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 990px) { 
+
+.tablet {display: run-in;}
+
+.tablet-logo {
+    height: 80px;
+    width: 125px;
+    cursor: auto;
+	display:block;
+    text-align: center; 
+    margin:auto;
+} 
+
+/*------------- disposition -------------*/
+
+ul {list-style: none;}
+	
+h3 {font-size: 1.3em;}
+
+body {padding : 10px;}
+  
+.ligne {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*------------------------- header ------------------------------*/
+.header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 0px;
+}
+
+.header-link::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+}
+
+/*------ registration ------------*/
+#registration a {
+    color: #0065FC;
+}
+#registration:hover>a {
+    font-style: italic;
+}
+.tablet {
+	flex-direction: ;
+	padding: 0 10px;
+	}
+	
+.tablet .ligne {						
+		
+	justify-content: space-between; 
+	margin: 10px;
+	}
+.tablet .ligne p a {color: #0065FC;}															
+.tablet .ligne p a:active {font-style: italic;}
+
+/*--------------- nav tablet ------------------*/
+.tablet nav {
+		display: flex;	 
+		justify-content: stretch; 
+		}
+
+.tablet nav ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around; 
+		width: 100%;
+	}
+.tablet nav ul li a{	
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	
+.tablet nav ul li:hover {border-top: 2px solid rgba(0, 0, 0, 0);}
+.tablet nav ul li:active {border-bottom: 2px solid #0065FC;}
+.tablet nav ul li:active > a {color: #0065FC;}	
+	
+/
+/*-------------------- footer -------------------------------------*/
+footer {padding-left: 10px;}
+footer .col {margin-right: 10%;}
+
+.smart {display: none;}	
+.desktop {display:none;}	
+}/*fin media*/
