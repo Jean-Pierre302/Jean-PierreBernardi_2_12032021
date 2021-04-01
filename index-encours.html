@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Reservia - Hébergements de rêve</title>
+    <meta name="Description" content="Trouvez votre hébergement pour des vacances de rêve">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style-desktop-encours.css"> <!-- Media queries for Desktop -->
+    <link rel="stylesheet" type="text/css"  href="style-smart-encours.css"> <!-- Media queries for Smartphone -->
+    <link rel="stylesheet" type="text/css" href="style-tablet-encours.css"> <!--Media queries for Tablets -->
+    
+    <script src="https://kit.fontawesome.com/6a824a900d.js" crossorigin="anonymous"></script>
+
+
+
+
+</head>
+
+<body>
+    <!-- Header En tête page Desktop & Tablet -->
+    <header class="desktop">
+        <img src="./images/logo/Reservia.svg" alt="logo Reservia " class="logo">
+        <nav>
+            <ul>
+                <li><a class="header-link" href="#hebergements">Hébergements</a></li>
+                <li><a class="header-link" href="#activites">Activités</a></li>
+                <li id="inscription-desktop"><a class="stretch-link" href=""><strong>S'inscrire</strong></a></li>
+                
+            </ul>
+        </nav>
+    </header>           
+    <!-- Header En tête de la page Smartphone -->
+
+    <header class="smart">
+
+      <img src="./images/logo/logoPetit.png" alt="logo Reservia " class="smart-logo">
+      <h3 class="align_droite" id="inscription-smart"><a class="stretch-link" href=""><strong>S'inscrire</strong></a></h3>
+      <nav>
+        <ul>
+            <li><a class="header-link" href="#hebergements">Hébergements</a></li>
+            <li><a class="header-link" href="#activites">Activités</a></li>
+        </ul>
+
+    </nav>
+
+</header>
+
+<!-- section recherche -->
+<div class="wrapper">
+    <section id="recherche">
+        <h1><strong>Trouvez votre hébergement pour des vacances de rêve</strong></h1>
+        <p>En plein centre ville ou en pleine nature</p>
+
+        <div id="bloc_recherche" class="ligne">
+            <form>
+             <i class="fas fa-map-marker-alt"></i>
+             <input type="search" name="search" placeholder="Marseille, France" required>
+             <span id="rechercher_bouton" class="desktop"><strong>Rechercher</strong></span>
+             <a id="cache_bouton" href="#"><i class="fas fa-search tel"></i></a>
+         </form>
+
+     </div>
+ </section>
+</div>
+<!-- section filtres -->
+<section id="filtres">
+    <div class="ligne">
+        <h3>Filtres</h3>
+        <ul>
+            <li class="ligne">
+                <a href="#"><i class="fas fa-money-bill-wave"></i><strong> &Eacute;conomique</strong></a>
+            </li>
+            <li class="Ligne">
+                <a href="#"><i class="fas fa-child"></i><strong> Familial</strong></a>
+            </li>
+            <li class="Ligne">
+                <a href="#"><i class="fas fa-heart"></i><strong> Romantique</strong></a>
+            </li>
+            <li class="Ligne">
+                <a href="#"><i class="fas fa-dog"></i><strong> Animaux autoris&eacute;s</strong></a>
+            </li>
+        </ul>
+    </div>
+    <p><i class="fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
+</section>
+
+
+</body>
+</html>

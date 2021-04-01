@@ -1,0 +1,147 @@
+/* ---------------------- Media queries for Smartphone --------------------------*/			
+@media only screen and (min-width: 375px) and (max-width: 760px) {
+	@font-face {font-family : 'Raleway', 'RalewayBold';}
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	.smart {display: block;}
+
+	.smart-logo {
+		height: 40px;
+		width: 70px;
+		cursor: auto;
+	}
+	/*------------- disposition -------------*/        
+
+	ul {list-style: none;}
+	
+	h3 {font-size: 0.9em;}
+	body {padding : 0;}
+	p  {align-self: center;
+		font-size: 0.9em;
+	}
+
+	.align_droite{float:right;}
+
+	/*------------------ header -------------*/
+
+	header {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 20px;
+	}
+
+	#inscription-smart a {color : #0065FC;}
+
+	#inscription-smart:hover > a {
+		font-style : italic;
+		color : #0065FC;
+	}
+
+	
+	nav ul {margin : 0;
+		padding : 0px 10px 5px 0px;
+		border-bottom : 2px solid #F2F2F2;
+	}
+
+
+	nav ul li {
+		padding : 20px 0px 0px 50px;
+		position : relative;
+	}
+
+	.header-link > a:hover  {
+		color : #0065FC;
+	}
+
+	
+	nav ul li:hover {
+		border-top : 2px solid #0065FC;
+
+	}
+
+	nav ul li > a:hover {color : #0065FC;
+	}
+	
+	.smart {
+		flex-direction: column;
+		padding: 0 15px;
+	}
+
+	/*---------------- recherche ------------*/
+	#recherche {					
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 20px;
+		padding: 0 20px;
+	}
+
+	#bloc_recherche {align-self: center;}	
+
+	
+	#bloc_recherche i:last-child { 		
+		border-radius: 10px;
+		background-color: #0065FC;
+		padding: 11px;
+		color: white;
+		display: inline-block;
+
+	}
+	#bloc_recherche i:last-child:active {
+		box-shadow: inset 5px 5px 5px blue; 
+		
+	}
+	#rechercher_bouton a{
+		display: none;
+	}
+
+	#cache_bouton {
+		display : inline-block;
+	}
+	/*------------------- filtres ------------*/
+
+	.ligne {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#filtres .ligne {flex-wrap: wrap;}
+
+
+	#recherche h1 {
+		color: #000;
+		margin:auto;
+		font-size: 1.3em;
+		padding: 10px 35px;
+		font-family : RalewayBold;
+	}
+
+	#filtres h3 {
+		margin-right: 78%;
+		padding: 5px 5px;
+	}
+
+	#filtres i {
+		color: #0065FC;
+		border: 2px solid #F2F2F2;
+		border-radius: 50%;
+		font-size: 0.9em;
+
+	}
+
+	#filtres p {
+		color: #000;
+		margin-left:auto;
+		padding: 0px 50px 0px 10px;
+		font-size: 1em;
+		font-style : italic;
+	}
+
+	.desktop {display:none;}
+	.tablet {display : none;}
+} /*-- Fin Media Queries --*/
