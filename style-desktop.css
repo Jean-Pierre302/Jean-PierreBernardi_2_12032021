@@ -1,0 +1,285 @@
+/*-charte graphique du site - Codes couleurs -------*/
+/*-- definition des variables couleurs --*/
+:root 
+{
+    --gris: #F2F2F2;
+    --bleu: #0065FC ;
+    --bleuclair: #DEEBFF;
+}
+
+@font-face {font-family : 'Raleway', 'RalewayBold';
+            src: url(fonts/Raleway-Regular.ttf);
+            src: url(fonts/Raleway-Bold.ttf);
+}
+/*-----css desktop et paramétres globaux --------------------*/
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body 
+{
+    font-family: 'Raleway';
+    font-size: 15px;
+}
+
+.main
+{
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+section
+{
+    margin: 20px 30px;
+}
+
+h1
+{
+    font-size: 1.3rem;
+     margin-bottom: 10px;
+}
+
+/*-- section Header de la page --*/
+.logo
+{
+   height: 40px;
+   width: 80px;
+   margin: 25px auto 0 35px;
+}
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+header a
+{
+    display: block;
+    padding: 0 25px;
+    padding-top: 40px;
+    font-size: 1rem;
+    color: #000;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+header > a
+{
+    margin-right: 10px;
+    font-weight: bold;
+    color: var(--bleu);
+}
+
+header > a:hover
+{
+    color: var(--bleu);
+    font-style:italic;
+    font-size: 1.1em;
+}
+
+header > a:focus {
+    pointer-events:none;/* Pour enlever le rectangle quand on clique sur le lien*/
+    outline:none; 
+}
+
+/*--------------- navigation ----------------------*/
+
+nav ul
+{
+    display: flex;
+    height: 100%;
+    list-style-type: none;
+}
+
+nav a:hover
+{
+    padding-top: 38px;
+    border-top: 2px solid var(--bleu);
+    color: var(--bleu);
+}
+
+nav a:focus {
+    pointer-events:none;
+    outline:none;
+}
+
+/*-------------------------- section_recherche ---------------------------------- */
+
+#section_recherche form
+{
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.rechercher
+{
+    margin: 10px 0;
+    display: flex;
+}
+
+
+.rechercher input[type="search"]
+{
+    margin: 0;
+    padding: 10px;
+    border-top: 1px solid var(--gris);
+    border-right: 0;
+    border-bottom: 1px solid var(--gris);
+    border-left: 0;
+    font-weight: bold;
+    
+}
+
+.rechercher button
+{
+    padding: 10px 15px;
+    background-color: var(--bleu);
+    border: 1px solid var(--bleu);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.rechercher button:hover {
+    box-shadow : 5px 5px 5px #DEEBFF inset;
+}
+.bouton_rechercher
+{ 
+    visibility: hidden;
+    width: 0;
+}
+
+.chercher_ville
+{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 13px;
+    border: 1px solid var(--gris);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: var(--gris);
+}
+
+
+/*------------ section filtres par tendance -----------------*/
+
+.filtres input[type="checkbox"]
+{
+    display: none;
+}
+
+.filtres
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filtres p
+{
+    padding-right: 15px;
+}
+
+.filtres label
+{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.filtres .fas
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -20px;
+    width: 45px;
+    height: 45px;
+    border: 2px solid var(--bleuclair);
+    border-radius: 25px;
+    color: var(--bleu);
+    background-color: var(--bleuclair);
+    z-index: 3;
+
+}
+
+.filtres label:hover .fas
+{
+    border-color: var(--gris);
+    
+}
+
+
+.filtres span
+{
+    padding: 10px 20px 10px 30px;
+    border-top: 2px solid var(--gris);
+    border-right: 2px solid var(--gris);
+    border-bottom: 2px solid var(--gris);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    line-height: 1.4rem;
+    z-index: 2;
+    user-select: none;
+    
+}
+
+.filtres span:hover{
+    background-color: var(--bleuclair);
+    border-top: 2px solid var(--gris);
+    border-right: 2px solid var(--gris);
+    border-bottom: 2px solid var(--gris);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    color: var(--bleu);
+}
+
+.filtres input[type="checkbox"]:checked + label > .fas
+{
+    color: var(--bleuclair);
+    border-color: var(--bleu);
+    background-color: var(--bleu);
+}
+
+.filtres input[type="checkbox"]:checked + label > span
+{
+    background-color: var(--bleuclair);
+
+}
+
+/*----- pictogramme info ----------*/
+
+.picto
+{
+    display: flex;
+    align-items: center;
+}
+
+.picto .fa-info
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    padding: 10px;
+    color: var(--bleu);
+    opacity:0.6;
+    font-size: 0.6rem;
+    border: 2px solid var(--gris);
+    border-radius: 25px;
+    
+
+}
+
+
