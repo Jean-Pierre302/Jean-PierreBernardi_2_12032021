@@ -1,0 +1,131 @@
+/*-- Mediaquerries pour smartphone -> 460px */
+
+@media only screen and (min-width:320px) and (max-width: 767px) {
+
+    section     {
+        margin: 20px;
+        padding: 0;
+    }
+
+    
+    /*-- section Header de la page --*/
+    
+    .logo     {
+        margin-top: 0;
+        margin-left: 20px;
+        margin-right: auto;
+        order: 1;
+    }
+    
+
+    header     {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+    }
+    
+    
+/*--------------- navigation ----------------------*/
+    nav    {
+        flex-basis: 100%;
+        margin-top: 25px;
+        width: 100%;
+        order: 3;
+    }
+
+    nav ul     {
+        padding: 0;
+        
+    }
+
+    nav li     {
+        width: 50%;
+        text-align: center;
+    }
+
+    nav a     {
+        padding-top: 0;
+        padding-bottom: 20px;
+        border-bottom: 2px solid var(--gris);
+    }
+
+    nav a:hover
+    {
+        padding-top: 0;
+        border-top: initial;
+        border-bottom: 3px solid #0065FC;
+    }
+
+    header > a     {
+        margin-right: 0;
+        align-self: center;
+        text-align: right;
+        order: 2;
+
+    }
+
+    header > a     {
+        padding: 5px;
+        margin-right: 20px;
+    }
+
+    /*----------- section_recherche --------------- */
+
+    #section_recherche form    {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .rechercher input[type="search"] {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .rechercher button     {
+        padding: 6px;
+        margin-left: -8px;
+        border-radius: 10px;
+    }
+
+    .rechercher button span     {
+        display: none;
+    }
+
+    .bouton_rechercher     {
+        visibility: visible;
+        padding: 10px;
+        width: initial;
+    }
+
+    .chercher_ville     {
+        padding: 10px 16px;
+    }
+
+    /*------------ section filtres par tendance -----------------*/
+
+    .filtres     {
+        justify-content: flex-start;
+    }
+
+    .filtres p     {
+        margin-top: 20px;
+        margin-bottom: 5px;
+        padding: 0;
+        width: 100%;
+    }
+
+    .filtres label     {
+        margin: 10px 0;
+        margin-right: 10px;
+    }
+
+    .filtres label:hover .fas     {
+        border-color: #deebff;
+    }
+
+    .picto     {
+        margin-bottom: 30px;
+    }
+
+}

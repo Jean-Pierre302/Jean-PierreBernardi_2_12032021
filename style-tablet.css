@@ -1,0 +1,44 @@
+@media only screen and (min-width:768px) and (max-width: 1279px)
+{   
+
+.rechercher input[type="search"] {
+        width: 30%;
+        font-size: 1rem;
+    }
+
+/*------------ section filtres par tendance -----------------*/
+.filtres
+    {
+        justify-content: space-around;
+    }
+.filtres
+    {
+        justify-content: flex-start;
+    }
+
+.filtres p
+    {
+        margin-top: 20px;
+        margin-bottom: 5px;
+        padding: 0;
+        width: 100%;
+    }
+
+.filtres label
+    {
+        margin: 10px 0;
+        margin-right: 10px;
+    }
+
+    .filtres label:hover .fas
+    {
+        border-color: #deebff;
+    }
+}
+
+
+    
+       
+  
+  
+  
