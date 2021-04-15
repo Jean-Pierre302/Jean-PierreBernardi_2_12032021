@@ -1,8 +1,6 @@
-/*-- Mediaquerries pour smartphone -> 460px */
-
-@media only screen and (min-width:320px) and (max-width: 767px) {
-
-    section     {
+@media only screen and (min-width:320px) and (max-width: 667px) {
+    
+    section, article, aside {
         margin: 20px;
         padding: 0;
     }
@@ -47,15 +45,22 @@
     nav a     {
         padding-top: 0;
         padding-bottom: 20px;
-        border-bottom: 2px solid var(--gris);
+        border-bottom: 3px solid rgba(190,190,190,0.3);
     }
 
-    nav a:hover
-    {
+    nav a:hover  {
         padding-top: 0;
         border-top: initial;
-        border-bottom: 3px solid #0065FC;
+        border-bottom: 3px solid var(--bleu);
     }
+
+    nav a:active {
+    pointer-events:auto;
+    padding-top: 0;
+    border-top: initial;
+    border-bottom: 3px solid var(--bleu);
+    color: var(--bleu);
+} 
 
     header > a     {
         margin-right: 0;
@@ -88,17 +93,17 @@
         border-radius: 10px;
     }
 
-    .rechercher button span     {
+    .rechercher button span  {
         display: none;
     }
 
-    .bouton_rechercher     {
+    .bouton_rechercher   {
         visibility: visible;
         padding: 10px;
         width: initial;
     }
 
-    .chercher_ville     {
+    .chercher_ville   {
         padding: 10px 16px;
     }
 
@@ -120,12 +125,87 @@
         margin-right: 10px;
     }
 
+    
     .filtres label:hover .fas     {
         border-color: #deebff;
     }
 
-    .picto     {
+    
+    .picto_info     {
         margin-bottom: 30px;
+    }
+}
+
+#location     {
+        flex-direction: column;
+    }
+    
+#hebergements, #populaires {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 20px;
+        border-radius: 0;
+    }
+
+    .fiche_location:hover, .fiche_location_populaire:hover {
+        transform: initial;
+        box-shadow: 2px 2px 7px rgba(177, 177, 177, 0.4);
+    }
+
+    .fiche_produit {
+        padding: 5px;
+    }
+
+    
+    .afficher_plus
+    {
+        padding: 20px 0;
+    }
+
+    #populaires {
+        margin-bottom: 0;
+        order: 1;
+    }
+
+    .hebergements_populaires {
+        margin: 20px 0;
+    }
+
+    .fiche_location_populaire {
+        margin: 6px 0;
+    }
+
+    .fiche_location_populaire .photos {
+        padding-top: 40%;
+    }
+
+    #hebergements {
+        margin-top: 0;
+        margin-bottom: 0;
+        background-color: initial;
+        order: 2;
+    }
+
+    #hebergements h2     {
+        margin-left: 0;
+    }
+
+    #hebergements > div     {
+        flex-direction: column;
+    }
+
+    .fiche_location     {
+        width: 100%;
+        height: initial;
+    }
+
+    .fiche_location .photos     {
+        padding-top: 34%;
     }
 
 }
+
+    
+
+
+
