@@ -1,44 +1,160 @@
-@media only screen and (min-width:768px) and (max-width: 1279px)
-{   
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  header     {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+    }
 
-.rechercher input[type="search"] {
-        width: 30%;
+     header a, {
+        font-size: 1.3rem;
+     }
+
+     
+
+    h1, h2 {
+        font-size: 1.4rem;
+    }
+
+    div { 
+        text-align: center;
+    }
+
+    h3  {
+        font-size: 1.3rem;
+    }     
+
+    .fa-star {
+        font-size: 1.1rem;
+    }
+
+    .rechercher > p, .prix, span {
         font-size: 1rem;
+     }
+
+     .chercher_ville {
+        margin-right: 17vh;
     }
 
-/*------------ section filtres par tendance -----------------*/
-.filtres
-    {
-        justify-content: space-around;
+
+    .fa-map-marker-alt {
+        visibility: hidden;
+        width: 0;
     }
-.filtres
-    {
-        justify-content: flex-start;
+    
+    
+    .filtres label {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 0 2px;
+    cursor: pointer;
     }
 
-.filtres p
-    {
-        margin-top: 20px;
-        margin-bottom: 5px;
-        padding: 0;
-        width: 100%;
-    }
+.filtres .fas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -25px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--bleuclair);
+    border-radius: 15px;
+    color: var(--bleu);
+    background-color: var(--bleuclair);
+    transition: .1s;
+    z-index: 2;
+}
 
-.filtres label
-    {
-        margin: 10px 0;
-        margin-right: 10px;
-    }
+.filtres input[type="checkbox"]:checked + label > .fas {
+    color: var(--bleuclair);
+    border-color: var(--bleu);
+    background-color: var(--bleu);
+}
 
-    .filtres label:hover .fas
-    {
-        border-color: #deebff;
-    }
+.filtres span {
+    padding: 5px 5px 5px 40px;
+    border-top: 2px solid var(--gris);
+    border-right: 2px solid var(--gris);
+    border-bottom: 2px solid var(--gris);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    line-height: 0.7rem;
+    z-index: 1;
 }
 
 
+.filtres input[type="checkbox"]:checked + label > span {
+    background-color: var(--bleu);
+    color: var(--bleuclair);
+    border-color: var(--bleu);
+}
+
+    .picto_info {
+       margin-left: 15vh; 
+    }
+    #location     {
+        flex-direction: column;
+    }
     
-       
-  
-  
-  
+    #hebergements, #populaires {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+        border-radius: 0;
+        border-bottom:2px solid #a9a9a9;
+    }
+
+    .fiche_location:hover, .fiche_location_populaire:hover {
+        transform: initial;
+        box-shadow: 2px 2px 7px rgba(177, 177, 177, 0.4);
+    }
+
+    .fiche_produit {
+        padding: 5px;
+    }
+
+   
+    #populaires {
+        margin: 0;
+        order: 2;
+    }
+
+    .hebergements_populaires h2 {
+        margin: 10px 0;
+    }
+
+    .fiche_location_populaire {
+        margin: 10px 0;
+    }
+
+    .fiche_location_populaire .photos {
+        padding-top: 10%;
+        padding-right: 15%;
+    }
+
+    #hebergements {
+        margin-top: 0;
+        margin-bottom: 0;
+        background-color: #F2F2F2;
+        order: 1;
+    }
+
+    #hebergements h2     {
+        margin-left: 0;
+    }
+
+    #hebergements > div     {
+        flex-direction: row;
+    }
+
+    .fiche_location     {
+        width: 45%;
+        height: initial;
+    }
+
+    .fiche_location .photos     {
+        padding-top: 35%;
+    }
+
+}
+
