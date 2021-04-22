@@ -1,4 +1,4 @@
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
   header     {
         flex-wrap: wrap;
         justify-content: center;
@@ -6,8 +6,9 @@
         padding: 15px 0;
     }
 
-     header a, {
-        font-size: 1.3rem;
+     header a {
+        font-size: 1.1rem;
+        margin-bottom:10px;
      }
 
      
@@ -25,11 +26,11 @@
     }     
 
     .fa-star {
-        font-size: 1.1rem;
+        font-size: 0.6rem;
     }
 
     .rechercher > p, .prix, span {
-        font-size: 1rem;
+        font-size: 0.9rem;
      }
 
      .chercher_ville {
@@ -45,8 +46,9 @@
     
     .filtres label {
     display: flex;
-    justify-content: center;
-    margin: 10px 0 0 2px;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-right:2px;
     cursor: pointer;
     }
 
@@ -54,10 +56,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: -25px;
     width: 30px;
     height: 30px;
-    border: 2px solid var(--bleuclair);
+    border: 1px solid var(--bleuclair);
     border-radius: 15px;
     color: var(--bleu);
     background-color: var(--bleuclair);
@@ -72,10 +73,11 @@
 }
 
 .filtres span {
-    padding: 5px 5px 5px 40px;
-    border-top: 2px solid var(--gris);
-    border-right: 2px solid var(--gris);
-    border-bottom: 2px solid var(--gris);
+    margin-left: 5px;
+    padding: 5px 3px 0 20px;
+    border-top: 5px solid var(--gris);
+    border-right: 5px solid var(--gris);
+    border-bottom: 5px solid var(--gris);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     line-height: 0.7rem;
@@ -96,43 +98,18 @@
         flex-direction: column;
     }
     
-    #hebergements, #populaires {
-        margin-left: 0;
-        margin-right: 0;
+    #hebergements, #populaires, #activites {
+        margin: 20px;
         padding: 0;
-        border-radius: 0;
+        border-radius: 20px;
         border-bottom:2px solid #a9a9a9;
-    }
-
-    .fiche_location:hover, .fiche_location_populaire:hover {
-        transform: initial;
-        box-shadow: 2px 2px 7px rgba(177, 177, 177, 0.4);
     }
 
     .fiche_produit {
         padding: 5px;
     }
 
-   
-    #populaires {
-        margin: 0;
-        order: 2;
-    }
-
-    .hebergements_populaires h2 {
-        margin: 10px 0;
-    }
-
-    .fiche_location_populaire {
-        margin: 10px 0;
-    }
-
-    .fiche_location_populaire .photos {
-        padding-top: 10%;
-        padding-right: 15%;
-    }
-
-    #hebergements {
+   #hebergements {
         margin-top: 0;
         margin-bottom: 0;
         background-color: #F2F2F2;
@@ -149,12 +126,132 @@
 
     .fiche_location     {
         width: 45%;
-        height: initial;
+        height: 220px;
     }
 
     .fiche_location .photos     {
-        padding-top: 35%;
+        padding-top: 10px;
+        border-radius :10px;
     }
 
+    .smart_heb {
+    height:100px; 
+    width: 100%;
+    }   
+    #populaires {
+        order: 2;
+    }
+
+    #populaires > div {
+        flex-direction: row;       
+    }
+
+    .fiche_location_populaire {
+        width: 350px;
+        height: 180px;
+
+    }
+
+    .hebergements_populaires h2 {
+        margin-left: 35%;
+
+    } 
+
+    .fiche_location_populaire .photos {
+        
+        width: 100px;
+        height:170px;
+    }
+
+    
+/*----------- rubrique article activités---------*/
+.photos { 
+    background-size: cover;
+    background-position: center;
 }
 
+.tablet1 {
+   height:100px; 
+   width: 100%;
+}
+    
+.tablet2 {
+   height:240px; 
+   width: 100%;
+   margin-bottom: 35px;
+}
+
+#activites_article {
+    margin-bottom: 50px;
+    height: 250px;
+}
+
+#activites_article h2 {
+    margin: 20px 0;
+}
+
+.definition_activites {
+    margin: 20px 10px;
+    display: flex;
+    height: 100%;
+}
+
+.definition_activites> div {
+    margin: 0 25px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+   }
+
+.fiche_activites{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    flex-direction: column;
+}
+
+.fiche_activites .photos {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.fiche_activites h3 {
+    padding: 15px;
+    font-size: 0.8rem;
+}
+  
+/*-------------- Footer --------------------*/
+
+.pied_page {
+    width: 100%;
+    margin-top: 10px;
+    background-color: var(--gris);
+    
+}
+
+footer {
+    flex-direction: row;
+    padding: 15px 0;
+    margin-left:-10px;
+}
+
+
+footer h3 {
+    font-size: 1.2rem;
+    display:flex;
+    margin: 10px 32px;
+}
+
+
+footer div {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+footer a {
+    margin-bottom: 5px;
+    width: 100%;
+    display:flex;
+    margin: 0 32px;
+    }

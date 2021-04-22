@@ -21,29 +21,6 @@
     font-style: normal;
 }
 
-/*----------- définition des images herbergements, populaires --------------*/
-.cannebiere {background: url(images/hebergements/auberge-cannebiere.jpg);}
-.port {background: url(images/hebergements/hotel-du-port.jpg);}
-.mouettes {background: url(images/hebergements/hotel-les-mouettes.jpg);}
-.mer {background: url(images/hebergements/hotel-de-la-mer.jpg);}
-.panier {background: url(images/hebergements/auberge-le-panier.jpg);}
-.amina {background: url(images/hebergements/hotel-chez-amina.jpg);}
-.matin {background: url(images/hebergements/hotel-soleil-matin.jpg);}
-.coeur {background: url(images/hebergements/au-coeur-de-leau.jpg);}
-.bleu_blanc {background: url(images/hebergements/hotel-tout-bleu-blanc.jpg);}
-
-.photos { 
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-}
-
-   
-.photos img {
-    display:none;
-}
-
 /*---- logo du site Reservia --*/
 
 .reservia {background: url(images/logo/Reservia.svg);}
@@ -85,7 +62,7 @@ body
 .main
 {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1360px;
 }
 
 section, article, aside {
@@ -94,7 +71,6 @@ section, article, aside {
 
 h1 {
     font-size: 1.3rem;
-    font-weight: 1000;
     font-family: 'Raleway_bold';
     margin-bottom: 10px;
 }
@@ -102,29 +78,72 @@ h1 {
 h2 {
     font-family: 'Raleway_bold';
     font-size: 1.2rem;
-    font-weight: 1000;
 }
 
 h3 {
     font-size: 1.2rem;
     font-family: 'Raleway_bold';
-    font-weight: 1000;
     line-height: 1rem
 }
 
 strong {
     font-size: 0.9rem;
     font-family: 'Raleway_bold';
-    font-weight: 1000;
     line-height: 1rem
 }
 
 span {
     font-size: 0.9rem;
     font-family: 'Raleway';
-    font-weight: 1000;
     line-height: 0.9rem
 }
+
+/*-- commun hebergements populaire et activités-----------*/
+.fiche_location, 
+.fiche_location_populaire, 
+.fiche_activites {
+    display: flex;
+    padding: 5px;
+    box-shadow: 2px 2px 7px rgba(177, 177, 177, 0.4);
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    transition: .2s;
+
+}
+
+.fiche_location:hover, 
+.fiche_location_populaire:hover, 
+.fiche_activites:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 7px rgba(177, 177, 177, 0.2);
+}
+
+.photos { 
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.fiche_produit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5px 0 2px 0;
+}
+
+.fiche_produit > * {
+    padding: 2px 5px;
+}
+
+
+.prix span {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
 /*-- section Header de la page --*/
 
 header {
@@ -160,6 +179,7 @@ header > a:focus {
     outline: 0;
 }
 
+
 /*------navigation --------------*/
 
 nav ul {
@@ -182,14 +202,6 @@ nav a:focus {
     border-top: 2px solid var(--bleu);
     color: var(--bleu);
 }
-
-.navigation nav a:active {
-    pointer-events:auto;
-    padding-top: 45px;
-    border-top: 3px solid var(--bleu);
-    color: var(--bleu);
-} 
-
 
 /*------------- section_recherche -------------- */
 
@@ -242,7 +254,7 @@ nav a:focus {
     box-shadow : 5px 5px 5px var(--bleuclair) inset;
 }
 
-.bouton_rechercher { /* cacher bouton de recherche pour smartphone */
+.bouton_rechercher { /* cacher bouton de recherche smartphone */
     visibility: hidden;
     width: 0;
 }
@@ -346,48 +358,16 @@ nav a:focus {
     border-radius: 25px;
 }
 
-/*------ rubrique article hebergements -------------------*/
-
-/*-- commun hebergements et populaires -----------*/
-.fiche_location, .fiche_location_populaire {
-    display: flex;
-    padding: 5px;
-    box-shadow: 2px 2px 7px var(--gris);
-    opacity: 0.8;
-    border-radius: 10px;
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    transition: .2s;
-}
-
-.fiche_location:hover, .fiche_location_populaire:hover {
-    transform: scale(1.10);
-    box-shadow: 3px solid rgba(190,190,190,0.3);
-    opacity : 1;
-}
-
-.fiche_produit {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 5px 0 2px 0;
-}
-
-.fiche_produit > * {
-    padding: 2px 5px;
-}
 
 
-.prix span {
-    font-weight: bold;
-    font-size: 0.9rem;
-}
-
+/****---bloc location article hebergements + aside populaires ----*/
 
 #location {
     display: flex;
 }
+
+/*------------ article hebergements -------------*/
+
 
 #hebergements {
     flex: 9;
@@ -398,7 +378,7 @@ nav a:focus {
 
 #hebergements h2 {
     margin-top: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     margin-left: 20px;
 }
 
@@ -412,9 +392,10 @@ nav a:focus {
     flex-direction: column;
     position: relative;
     margin: 15px 0px;
-    width: 30%;
-    height: 160px;
+    width: 29%;
+    height: 300px;
 }
+
 
 .fiche_location .photos {
     flex: 1;
@@ -438,8 +419,9 @@ nav a:focus {
 .afficher_plus:hover {
     color: var(--bleu);
     font-style: italic;
-    font-size: 900;
 }
+
+
 
 /*-- rubrique aside hebergements populaires ---*/
 
@@ -448,7 +430,7 @@ nav a:focus {
     display: flex;
     flex-direction: column;
     margin-left: 0;
-    padding: 15pxpx;
+    padding: 15px;
     border-radius: 10px;
     background-color: var(--gris);
 }
@@ -457,11 +439,11 @@ nav a:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 35px 10px 15px 10px;
+    margin: 25px 10px 15px 10px;
 }
 
 .hebergements_populaires .fas {
-    font-size: 1.25rem;
+    font-size: 1.20rem;
 }
 
 .classement_populaire {
@@ -477,10 +459,10 @@ nav a:focus {
 
 .fiche_location_populaire .photos {
     flex: 2;
-    height: initial;
+    height: 190px;
+    width: 170px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    background-color: black;
 }
 
 .fiche_location_populaire .fiche_produit {
@@ -491,5 +473,155 @@ nav a:focus {
 .fiche_location_populaire .prix {
     margin-bottom: auto;
 }
+
+/*----------- rubrique article activités---------*/
+.photos
+{ 
+    background-size: cover;
+    background-position: center;
+}
+
+.port {
+   height:300px; 
+   width: 305px;
+}
+
+.pomegues {
+    height: 140px;
+    width: 100%;
+}
+
+.frioul {
+    height: 90px;
+    width: 100%;
+}
+
+.calanques {
+    filter: brightness(1.3) contrast(95%);
+    height: 300px;
+    width: 100%;
+}
+
+.garde {
+    height: 110px;
+    width: 100%;
+}
+
+.longchamp {
+    height: 110px;
+    width: 100%;
+}
+    
+#activites_article {
+    margin-bottom: 90px;
+    height: 350px;
+}
+
+#activites_article h2 {
+    margin: 20px 0;
+}
+
+.definition_activites {
+    margin-top: 20px;
+    display: flex;
+    height: 100%;
+}
+
+.definition_activites> a{
+    flex: 1;
+}
+
+.definition_activites> div {
+    margin: 0 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.definition_activites> div:first-of-type> .fiche_activites:nth-of-type(2) {
+    margin-top: 30px;
+    height: 70%;
+}
+
+.definition_activites > div:last-of-type {
+    margin-right: 0;
+}
+
+.definition_activites > div:last-of-type> .fiche_activites:not(:first-of-type) {
+    margin-top: 30px;
+}
+
+.fiche_activites{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    flex-direction: column;
+}
+
+.fiche_activites .photos {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.fiche_activites h3 {
+    padding: 15px;
+    font-size: 0.8rem;
+}
+  
+/*-------------- Footer --------------------*/
+
+.pied_page {
+    width: 100%;
+    background-color: var(--gris);
+    margin-top:40px;  
+    margin-left:10px;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+h3:hover {
+    color: var(--bleu);
+}
+
+
+footer {
+    margin: 0 auto;
+    padding: 25px 25px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 95%;
+    background-color: var(--gris);
+}
+
+footer div {
+    width: 30%;
+}
+
+footer ul {
+    padding: 10px 0;
+    list-style-type: none;
+}
+
+footer li {
+    padding: 5px 0;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+
+footer a:hover {
+    color: var(--bleu);
+    font-style: italic;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
 
 
