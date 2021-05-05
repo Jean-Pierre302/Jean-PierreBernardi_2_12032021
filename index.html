@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Reservia - Dev</title>
+    <title>Reservia &#124; Location de vacances</title><!--5/5/21-->
     <meta name="Description" content="Trouvez votre hébergement pour les vacances dans toutes les villes de France">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="style-desktop.css"> 
-    <link rel="stylesheet" media="screen and (max-width: 759px)"  href="style-smart.css"> 
-    <link rel="stylesheet" media="screen and (min-width: 760px) and (max-width: 1024px)" href="style-tablet.css"> 
+    <link rel="stylesheet" href="style-desktop.css" type="text/css"/><!--media query desktop ou laptop-->
+    <link rel="stylesheet" media="screen and (max-width: 759px)"  href="style-smart.css" type="text/css"/><!--media query smartphone--> 
+    <link rel="stylesheet" media="screen and (min-width: 760px) and (max-width: 1024px)" href="style-tablet.css" type="text/css"/><!--media query tablette-->
     <script src="https://kit.fontawesome.com/6a824a900d.js" crossorigin="anonymous"></script><!-- utilisation des icones de la bibliothèque Font Font awesome -->
 </head>
 
 <body>
     <div class="main"><!-- Page Principale -->
         <header><!-- section header de la page -->
-            <span class="logo reservia"></span>
+            <span><img class="logo" src="./images/logo/Reservia.svg" alt="logo Reservia"></span>
             <nav>
                 <ul>
                     <li><a href="#hebergements">H&eacute;bergements</a></li>
@@ -32,11 +32,11 @@
             <form action="#" method="post">
                 <div class="rechercher">
                     <i class="fas fa-map-marker-alt chercher_ville"></i>
-                    <input type="search" name="search" value="Marseille, France"  required/>
+                    <input type="search" name="search" placeholder="Marseille, France"  required/>
                     <button type="submit"><span>Rechercher</span><i class="fas fa-search bouton_rechercher"></i></button>
                 </div>
                 <div class="filtres"> <!-- section filtres par catégories -->
-                    <p><strong>Filtres</strong></p>
+                    <p>Filtres</p>
                     <input type="checkbox" name="filter" id="economique">
                     <label for="economique"><i class="fas fa-money-bill-wave"></i><span>&Eacute;conomique</span></label>
 
@@ -59,85 +59,85 @@
                 <h2>H&eacute;bergements &agrave; Marseille</h2>
                 <div>
                     <a href="#" class="fiche_location">
-                        <img class="photos smart_heb tablet_heb" src="./images/hebergements/auberge-cannebiere.jpg" alt="Auberge la Cannebi&egrave;re">
+                        <img class="photos" src="./images/hebergements/Auberge_la_Cannebiere.jpg" alt="Auberge la Cannebi&egrave;re">
                             <div class="fiche_produit"><h3><strong>Auberge la Cannebi&egrave;re</strong></h3>
                                 <p class="prix">Nuit &agrave; partir de <span>25&euro;</span></p>
                                     <div>
-                                        <i class="fas fa-star fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu "></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-argent"></i>                               
                                     </div>
                             </div>
                     </a>
 
                     <a href="#" class="fiche_location">
-                        <img class="photos smart_heb tablet_heb" src="./images/hebergements/hotel-du-port.jpg" alt="H&ocirc;tel du port">
+                        <img class="photos" src="./images/hebergements/Hotel_du_port.jpg" alt="H&ocirc;tel du port">
                             <div class="fiche_produit"><h3><strong>H&ocirc;tel du port</strong></h3>
                                 <p class="prix">Nuit &agrave; partir de <span>52&euro;</span></p>
                                     <div>
-                                        <i class="fas fa-star fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu "></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
                                     </div>
                             </div>
                     </a>
 
                     <a href="#" class="fiche_location">
-                        <img class="photos smart_heb tablet_heb" src="./images/hebergements/hotel-les-mouettes.jpg" alt="H&ocirc;tel les mouettes">
+                        <img class="photos" src="./images/hebergements/Hotel_les_mouettes.jpg" alt="H&ocirc;tel les mouettes">
                             <div class="fiche_produit"><h3><strong>H&ocirc;tel les mouettes</strong></h3>
                                 <p class="prix">Nuit &agrave; partir de <span>76&euro;</span></p>
                                     <div>
-                                        <i class="fas fa-star fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-argent"></i>
-                                    </div>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu "></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-argent"></i>
+                                    </div>                                 
                             </div>
                     </a>
 
                     <a href="#" class="fiche_location">
-                        <img class="photos smart_heb tablet_heb" src="./images/hebergements/hotel-de-la-mer.jpg" alt="H&ocirc;tel de la mer">
+                        <img class="photos" src="./images/hebergements/Hotel_de_la_mer.jpg" alt="H&ocirc;tel de la mer">
                             <div class="fiche_produit"><h3><strong>H&ocirc;tel de la mer</strong></h3>
                                 <p class="prix">Nuit &agrave; partir de <span>46&euro;</span></p>
                                     <div>
-                                        <i class="fas fa-star fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-argent"></i>
-                                        <i class="fas fa-star fa-star-argent"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu "></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-argent"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-argent"></i>
                                     </div>
                             </div>
                     </a>
                                     
                     <a href="#" class="fiche_location">
-                        <img class="photos smart_heb tablet_heb" src="./images/hebergements/auberge-le-panier.jpg" alt="Auberge le Panier">
+                        <img class="photos" src="./images/hebergements/Auberge_le_Panier.jpg" alt="Auberge le Panier">
                             <div class="fiche_produit"><h3><strong>Auberge le Panier</strong></h3>
                                 <p class="prix">Nuit &agrave; partir de <span>23&euro;</span></p>
                                     <div>
-                                        <i class="fas fa-star fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-argent"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu "></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-argent"></i>
                                     </div>
                             </div>
                     </a>
 
                     <a href="#" class="fiche_location">
-                        <img class="photos smart_heb tablet_heb" src="./images/hebergements/hotel-chez-amina.jpg" alt="H&ocirc;tel chez Amina">
+                        <img class="photos" src="./images/hebergements/Hotel_chez_Amina.jpg" alt="H&ocirc;tel chez Amina">
                             <div class="fiche_produit"><h3><strong>H&ocirc;tel chez Amina</strong></h3>
                                 <p class="prix">Nuit &agrave; partir de <span>96&euro;</span></p>
                                     <div>
-                                        <i class="fas fa-star fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu "></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
                                     </div>
                             </div>
                     </a>
@@ -149,43 +149,43 @@
             <div class="hebergements_populaires"><h2>Les plus populaires</h2><i class="fas fa-chart-line"></i></div>
                 <div class="classement_populaire">
                     <a href="#" class="fiche_location_populaire">
-                        <img class="photos smart_pop" src="./images/hebergements/hotel-soleil-matin.jpg" alt="H&ocirc;tel Le soleil du matin">
+                        <img class="photos" src="./images/hebergements/Hotel_le_soleil_du_matin.jpg" alt="H&ocirc;tel Le soleil du matin">
                         <div class="fiche_produit"><h3><strong>H&ocirc;tel Le soleil du matin</strong></h3>
                             <p class="prix">Nuit &agrave; partir de <span>128&euro;</span></p>
                             <div>
-                                <i class="fas fa-star fa-star-bleu"></i>
-                                <i class="fas fa-star fa-star-bleu"></i>
-                                <i class="fas fa-star fa-star-bleu"></i>
-                                <i class="fas fa-star fa-star-bleu"></i>
-                                <i class="fas fa-star fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
                             </div>
                         </div>
                     </a>
 
                     <a href="#" class="fiche_location_populaire">
-                        <img class="photos smart_pop" src="./images/hebergements/au-coeur-de-leau.jpg" alt="Au coeur de l'eau Chambres d'h&ocirc;tes">
+                        <img class="photos" src="./images/hebergements/Au_coeur_de_l'eau_chambres_d'hotes.jpg" alt="Au coeur de l'eau Chambres d'h&ocirc;tes">
                         <div class="fiche_produit"><h3><strong>Au coeur de l'eau Chambres d'h&ocirc;tes</strong></h3>
                             <p class="prix">Nuit &agrave; partir de <span>71&euro;</span></p>
                             <div>
-                                <i class="fas fa-star fa-star-bleu"></i>
-                                <i class="fas fa-star fa-star-bleu"></i>
-                                <i class="fas fa-star fa-star-bleu"></i>
-                                <i class="fas fa-star fa-star-bleu"></i>
-                                <i class="fas fa-star fa-star-argent"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-argent"></i>
                             </div>
                         </div>
                     </a>
                     <a href="#" class="fiche_location_populaire">
-                        <img class="photos smart_pop" src="images/hebergements/hotel-tout-bleu-blanc.jpg" alt="H&ocirc;tel Tout bleu et blanc">
+                        <img class="photos" src="images/hebergements/Hotel_tout_bleu_et_blanc.jpg" alt="H&ocirc;tel Tout bleu et blanc">
                         
                         <div class="fiche_produit"><h3><strong>H&ocirc;tel Tout bleu et blanc</strong></h3>
                             <p class="prix">Nuit &agrave; partir de <span>68&euro;</span></p>
                             <div>
-                                <i class="fas fa-star fa-star-bleu"></i>
-                                <i class="fas fa-star fa-star-bleu"></i>
-                                <i class="fas fa-star fa-star-bleu"></i>
-                                <i class="fas fa-star fa-star-bleu"></i>
-                                <i class="fas fa-star fa-star-argent"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
+                                        <i class="fas fa-star fa-star-shape fa-star-argent"></i>
                             </div>
                         </div>
                     </a>
@@ -200,34 +200,34 @@
                <div>
                <div class="definition_activites">
                     <a href="#" class="fiche_activites">
-                        <div class="port smart2 tablet2"><img class="photos" src= "./images/activites/vieux-port.jpg" alt="Vieux port"></div>
+                        <div class="port"><img class="photos" src= "./images/activites/Vieux_Port.jpg" alt="Vieux port"></div>
                             <h3>Vieux Port</h3>
                     </a>
             
             <div>
                 <a href="#" class="fiche_activites">
-                    <div class="pomegues smart1 tablet1"><img class="photos" src="./images/activites/fort-pomegues.jpg"  alt="Fort de Pom&egrave;gues" ></div>
+                    <div class="pomegues"><img class="photos" src="./images/activites/Fort_de_Pomegues.jpg"  alt="Fort de Pom&egrave;gues" ></div>
                             <h3>Fort de Pom&egrave;gues</h3>
                 </a>
                 
                 <a href="#" class="fiche_activites">
-                    <div class="frioul smart1 tablet1"><img class="photos" src="./images/activites/iles-frioul.jpg"  alt="&Icirc;les du Frioul"></div>
+                    <div class="frioul"><img class="photos" src="./images/activites/Iles_du_Frioul.jpg"  alt="&Icirc;les du Frioul"></div>
                         <h3>&Icirc;les du Frioul</h3>
                 </a>
             </div>
                 
                 <a href="#" class="fiche_activites">
-                    <div class="calanques smart2 tablet2"><img class="photos" src="./images/activites/parc-national-des-calanques.jpg"  alt="Parc National des Calanques" ></div>
+                    <div class="calanques"><img class="photos" src="./images/activites/Parc_national_des_Calanques.jpg"  alt="Parc National des Calanques" ></div>
                         <h3>Parc National des Calanques</h3>
                 </a>
             <div>
                 <a href="#" class="fiche_activites">
-                    <div class="garde smart1 tablet1"><img class="photos" src="./images/activites/notre-dame-de-la-garde.jpg" alt="Notre-Dame-de-la-Garde" ></div>
+                    <div class="garde"><img class="photos" src="./images/activites/Notre_Dame_de_Lagarde.jpg" alt="Notre-Dame-de-la-Garde" ></div>
                         <h3>Notre-Dame-de-la-Garde</h3>
                 </a>
             
                 <a href="#" class="fiche_activites">
-                    <div class="longchamp smart1 tablet1"><img class="photos" src="./images/activites/parc-longchamp.jpg"  alt="Parc Longchamp"></div>
+                    <div class="longchamp"><img class="photos" src="./images/activites/Parc_Longchamp.jpg"  alt="Parc Longchamp"></div>
                         <h3>Parc Longchamp</h3>
                 </a>
 

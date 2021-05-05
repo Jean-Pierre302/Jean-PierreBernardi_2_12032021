@@ -1,56 +1,120 @@
+  /*5/5/21*/
 
-  header     {
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        padding: 15px 0;
-    }
-
-     header a {
-        font-size: 1.1rem;
-        margin-bottom:10px;
-     }
-
-     
-
-    h1, h2 {
-        font-size: 1.4rem;
-    }
-
-    div { 
-        text-align: center;
-    }
-
-    h3  {
-        font-size: 1.3rem;
-    }     
-
-    .fa-star {
-        font-size: 0.6rem;
-    }
-
-    .rechercher > p, .prix, span {
-        font-size: 0.9rem;
-     }
-
-     .chercher_ville {
-        margin-right: 17vh;
-    }
-
-
-    .fa-map-marker-alt {
-        visibility: hidden;
-        width: 0;
-    }
+          
+.logo {
+  height:3.5rem;
+  width: 45rem;
+  padding:0.1rem 0;
+  border-bottom:1px solid var(--bleu);
+}
+header     {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
     
     
-    .filtres label {
+/*--------------- navigation ----------------------*/
+nav    {
+    flex-basis: 100%;
+    margin-top: 25px;
+    width: auto;
+    order: 3;
+}
+
+nav ul     {
+    margin: 0;      
+}
+
+nav li     {
+    width: 50%;
+    text-align: center;
+}
+
+
+nav li:nth-of-type(2) {
+    margin-left: 20px;
+    padding-left: 30px;      
+}
+
+nav a     {
+    font-size: 1.1rem;
+    padding-top: 0;
+    padding-bottom: 20px;
+
+}
+
+
+nav a:active {
+    pointer-events:auto;
+    padding-top: 0;
+    border-top: initial;
+    border-bottom: 3px solid var(--bleu);
+    color: var(--bleu);
+} 
+
+header > a     {
+    margin-right: 20px;
+    min-width: 760px;
+    max-width: 1024px;
+    padding-right: 20.5rem;
+    align-self: center;
+    text-align: right;
+    font-size: 1.2rem;
+    letter-spacing:0.05rem;
+    order: 2;
+}
+
+
+
+/*******************************************/
+h1, h2 {
+    font-size: 1.4rem;
+
+}
+
+div { 
+    text-align: center;    
+}
+
+h3  {
+    font-size: 1.3rem;
+
+}     
+
+.fa-star {
+    font-size: 0.6rem;
+}
+
+.rechercher > p, .prix, span {
+    font-size: 0.9rem;
+
+}
+
+.chercher_ville {
+    margin-right: 17vh;
+}
+
+
+.fa-map-marker-alt {
+    visibility: hidden;
+    width: 0;
+}
+
+.filtres p{
+    margin:0 1.8rem;
+    font-size: 1rem; 
+    font-weight: bold; 
+}
+
+.filtres label {
     display: flex;
     justify-content: space-around;
     margin-top: 10px;
     margin-right:2px;
     cursor: pointer;
-    }
+}
 
 .filtres .fas {
     display: flex;
@@ -91,102 +155,77 @@
     border-color: var(--bleu);
 }
 
-    .picto_info {
-       margin-left: 15vh; 
-    }
-    #location     {
-        flex-direction: column;
-    }
-    
-    #hebergements, #populaires, #activites {
-        margin: 20px;
-        padding: 0;
-        border-radius: 20px;
-        border-bottom:2px solid #a9a9a9;
-    }
+.picto_info {
+ margin-left: 15vh; 
+}
+#location     {
+    flex-direction: column;
+}
 
-    .fiche_produit {
-        padding: 5px;
-    }
+#hebergements, #populaires, #activites {
+    margin: px;
+    padding: 0;
+    border-radius: 20px;
+    background-color: white;
 
-   #hebergements {
-        margin-top: 0;
-        margin-bottom: 0;
-        background-color: #F2F2F2;
-        order: 1;
-    }
+}
 
-    #hebergements h2     {
-        margin-left: 0;
-    }
+#hebergements {
+    margin-top: 0;
+    margin-bottom: 0;
+    order: 1;
+}
 
-    #hebergements > div     {
-        flex-direction: row;
-    }
+#hebergements h2     {
+    margin-left: 0;
+}
 
-    .fiche_location     {
-        width: 45%;
-        height: 220px;
-    }
+#hebergements > div     {
+    flex-direction: row;
+}
 
-    .fiche_location .photos     {
-        padding-top: 10px;
-        border-radius :10px;
-    }
+.fiche_location     {
+    width: 30%;
+    height: 180px;
+}
 
-    .smart_heb {
-    height:100px; 
-    width: 100%;
-    }   
-    #populaires {
-        order: 2;
-    }
+.fiche_location .photos     {
+    padding-top: 5px;
+}
 
-    #populaires > div {
-        flex-direction: row;       
-    }
 
-    .fiche_location_populaire {
-        width: 350px;
-        height: 180px;
+#populaires {
+    order: 2;
+}
 
-    }
+#populaires > div {
+    flex-direction: row; 
+}
 
-    .hebergements_populaires h2 {
-        margin-left: 35%;
+.fiche_location_populaire {
+    width: 30%;
+    height: 170px;
+}
 
-    } 
+.hebergements_populaires h2 {
+    margin-left: 35%;
+} 
 
-    .fiche_location_populaire .photos {
-        
-        width: 100px;
-        height:170px;
-    }
+.fiche_location_populaire .photos {
 
-    
+    width: 100px;
+    height:160px;
+}
+
+
 /*----------- rubrique article activités---------*/
-.photos { 
-    background-size: cover;
-    background-position: center;
-}
 
-.tablet1 {
-   height:100px; 
-   width: 100%;
-}
-    
-.tablet2 {
-   height:240px; 
-   width: 100%;
-   margin-bottom: 35px;
-}
-
-#activites_article {
+#activites {
     margin-bottom: 50px;
     height: 250px;
 }
 
-#activites_article h2 {
+#activites h2 {
     margin: 20px 0;
 }
 
@@ -200,8 +239,8 @@
     margin: 0 25px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
-   }
+    margin-bottom: 25px;
+}
 
 .fiche_activites{
     width: 100%;
@@ -212,6 +251,7 @@
 
 .fiche_activites .photos {
     width: 100%;
+    height: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -220,38 +260,53 @@
     padding: 15px;
     font-size: 0.8rem;
 }
-  
+
 /*-------------- Footer --------------------*/
 
+
 .pied_page {
-    width: 100%;
-    margin-top: 10px;
+    width: 95%;
     background-color: var(--gris);
+    margin: 200px 50px 0 20px;
     
 }
 
 footer {
-    flex-direction: row;
-    padding: 15px 0;
-    margin-left:-10px;
+    margin: 0 auto;
+    padding: 35px 25px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 95%;
+    background-color: var(--gris);
 }
-
-
-footer h3 {
-    font-size: 1.2rem;
-    display:flex;
-    margin: 10px 32px;
-}
-
 
 footer div {
-    margin-bottom: 10px;
-    width: 100%;
+    width: 50%;
+}
+
+footer li {
+    padding: 3px 0;
+    display:fex;
+    text-align: left;
+    margin-right:2rem;
 }
 
 footer a {
-    margin-bottom: 5px;
-    width: 100%;
-    display:flex;
-    margin: 0 32px;
-    }
+    color: black;
+    text-decoration: none;
+    font-size: 0.9rem;
+     
+}
+
+footer h3 {
+    color: black;
+    text-decoration: none;
+    display:fex;
+    text-align: left;
+    margin-right:3rem;
+    font-size: 1rem;
+     
+
+}
+
+

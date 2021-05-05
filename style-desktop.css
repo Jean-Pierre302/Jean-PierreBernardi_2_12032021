@@ -1,3 +1,4 @@
+/*5/5/21*/
 /*-------- charte graphique du site -----*/
 /*-- definition des variables couleurs --*/
 :root {
@@ -21,27 +22,19 @@
     font-style: normal;
 }
 
-/*---- logo du site Reservia --*/
-
-.reservia {background: url(images/logo/Reservia.svg);}
-
-.logo {
-      margin: 20px auto 2px 35px;
-      height:35px;
-      width: 95px;
-}
 
 /*--- Etoiles notation -----*/
 
-.fa-star-argent {
-    margin: 0 -1px;
+.fa-star-shape {
+	 margin: 0 -1px;
     font-size: .7rem;
+}
+
+.fa-star-argent {
     color: #D3D3D3;
 }
 
 .fa-star-bleu {
-    margin: 0 -1px;
-    font-size: .7rem;
     color: var(--bleu);
 }
 
@@ -57,12 +50,13 @@ body
 {
     font-family: 'Raleway';
     font-size: 14px;
-}
+    overflow-x: hidden;
+   }
 
 .main
 {
     margin: 0 auto;
-    max-width: 1360px;
+    max-width: 1150px;
 }
 
 section, article, aside {
@@ -70,7 +64,7 @@ section, article, aside {
 }
 
 h1 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-family: 'Raleway_bold';
     margin-bottom: 10px;
 }
@@ -96,6 +90,12 @@ span {
     font-size: 0.9rem;
     font-family: 'Raleway';
     line-height: 0.9rem
+}
+
+p {
+    font-size: 0.7rem;
+    font-style: oblique;
+    letter-spacing:0.1em;
 }
 
 /*-- commun hebergements populaire et activités-----------*/
@@ -152,26 +152,36 @@ header {
     padding-bottom: 5px;
 }
 
+/*---- logo du site Reservia --*/
+
+
+.logo {
+      margin: 20px auto 2px 25px;
+      height:35px;
+      width: 95px;
+}
+
 header a {
     display: block;
-    padding: 0 25px;
-    padding-top: 45px;
-    font-size: 0.9rem;
+    margin-right: 45px;
+    padding-top: 20px;
+    font-size: 0.8rem;
     color: black;
     text-decoration: none;
-    transition: color .2s;
+    transition: color .5s;
+    
 }
 
 header > a {
-    margin-right: 10px;
+    margin-right: 70px;
     font-weight: bold;
     color: var(--bleu);
 }
 
 header > a:hover {
     color: var(--bleu);
-    font-style:italic;
-    font-size: 1.1rem;
+    font-style:oblique;
+    font-size: 0.9rem;
 }
 
 header > a:focus {
@@ -184,13 +194,13 @@ header > a:focus {
 
 nav ul {
     display: flex;
+    margin-left: 610px;
     height: 100%;
     list-style-type: none;
-
 }
 
 nav a:hover {
-    padding-top: 45px;
+    padding: 20px;
     border-top: 2px solid var(--bleu);
     color: var(--bleu);
 }
@@ -198,7 +208,7 @@ nav a:hover {
 nav a:focus {
     pointer-events:auto;
     outline-color: white;
-    padding-top: 45px;
+    padding: 20px;
     border-top: 2px solid var(--bleu);
     color: var(--bleu);
 }
@@ -216,7 +226,7 @@ nav a:focus {
 }
 
 .chercher_ville {
-    display: flex !important;
+    display: flex ;
     justify-content: center;
     align-items: center;
     padding: 10px 13px;
@@ -371,7 +381,6 @@ nav a:focus {
 
 #hebergements {
     flex: 9;
-    padding: 15px;
     border-radius: 10px;
     background-color: var(--gris);
 }
@@ -392,8 +401,8 @@ nav a:focus {
     flex-direction: column;
     position: relative;
     margin: 15px 0px;
-    width: 29%;
-    height: 300px;
+    width: 190px;
+    height: 160px;
 }
 
 
@@ -418,7 +427,7 @@ nav a:focus {
 
 .afficher_plus:hover {
     color: var(--bleu);
-    font-style: italic;
+    font-style: oblique;
 }
 
 
@@ -439,7 +448,7 @@ nav a:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 25px 10px 15px 10px;
+    
 }
 
 .hebergements_populaires .fas {
@@ -453,21 +462,23 @@ nav a:focus {
 }
 
 .fiche_location_populaire  {
-    height: 100%;
-    margin: 15px 10px;
+    height: 120px;
+    margin: 15px;
+    margin-bottom:10px;
+
 }
 
 .fiche_location_populaire .photos {
     flex: 2;
-    height: 190px;
-    width: 170px;
+    height: 110px;
+    width: 100px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
 
 .fiche_location_populaire .fiche_produit {
     flex: 3;
-    padding: 10px 10px;
+    padding: 5px 10px;
 }
 
 .fiche_location_populaire .prix {
@@ -475,61 +486,31 @@ nav a:focus {
 }
 
 /*----------- rubrique article activités---------*/
-.photos
-{ 
-    background-size: cover;
-    background-position: center;
-}
-
-.port {
-   height:300px; 
-   width: 305px;
-}
-
-.pomegues {
-    height: 140px;
-    width: 100%;
-}
-
-.frioul {
-    height: 90px;
-    width: 100%;
-}
-
-.calanques {
-    filter: brightness(1.3) contrast(95%);
-    height: 300px;
-    width: 100%;
-}
-
-.garde {
-    height: 110px;
-    width: 100%;
-}
-
-.longchamp {
-    height: 110px;
-    width: 100%;
-}
     
-#activites_article {
-    margin-bottom: 90px;
-    height: 350px;
+#activites {
+    margin-bottom: 10px;
+    height: 100%;
+    border-radius: 10px;
 }
 
-#activites_article h2 {
+#activites h2 {
     margin: 20px 0;
 }
 
 .definition_activites {
     margin-top: 20px;
     display: flex;
-    height: 100%;
+    height: 370px;
 }
 
 .definition_activites> a{
     flex: 1;
 }
+
+.definition_activites > a:first-of-type {
+    height: 370px;
+}
+
 
 .definition_activites> div {
     margin: 0 25px;
@@ -538,17 +519,52 @@ nav a:focus {
     flex-direction: column;
 }
 
+.definition_activites> div:first-of-type> .fiche_activites:nth-of-type(1) {
+    height: 190px;
+    marging-bottom:30px;  
+}
+
 .definition_activites> div:first-of-type> .fiche_activites:nth-of-type(2) {
-    margin-top: 30px;
-    height: 70%;
+    height: 150px;
+    margin-top:30px;  
 }
 
 .definition_activites > div:last-of-type {
     margin-right: 0;
+    
 }
 
 .definition_activites > div:last-of-type> .fiche_activites:not(:first-of-type) {
     margin-top: 30px;
+    
+}
+
+.port {
+   height:320px; 
+   }
+
+.pomegues {
+    height: 140px;
+    
+}
+
+.frioul {
+    height: 100px;
+    
+}
+
+.calanques {
+    height: 310px;
+     filter: brightness(1.4) contrast(90%);
+}
+
+.garde {
+    height: 120px;
+   
+}
+
+.longchamp {
+    height: 110px;
 }
 
 .fiche_activites{
@@ -560,41 +576,36 @@ nav a:focus {
 
 .fiche_activites .photos {
     width: 100%;
+    height:100%; 
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
+
 .fiche_activites h3 {
     padding: 15px;
     font-size: 0.8rem;
+    
 }
-  
+
 /*-------------- Footer --------------------*/
 
 .pied_page {
-    width: 100%;
+    width: 76%;
     background-color: var(--gris);
-    margin-top:40px;  
-    margin-left:10px;
+    margin: 40px 200px 0 180px;
 }
-
-h3 {
-    font-size: 1rem;
-}
-
-h3:hover {
-    color: var(--bleu);
-}
-
 
 footer {
     margin: 0 auto;
-    padding: 25px 25px;
+    padding: 35px 25px;
     display: flex;
     justify-content: space-between;
     max-width: 95%;
     background-color: var(--gris);
 }
+
+
 
 footer div {
     width: 30%;
@@ -612,13 +623,12 @@ footer li {
 footer a {
     color: black;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
-
 
 footer a:hover {
     color: var(--bleu);
-    font-style: italic;
+    font-style: oblique;
     text-decoration: none;
     font-size: 0.9rem;
 }
