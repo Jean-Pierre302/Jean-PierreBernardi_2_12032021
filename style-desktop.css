@@ -22,6 +22,18 @@
     font-style: normal;
 }
 
+/* Styles resets */
+html, body, div, span, h1, h2, h3, h4, p, a, em, img, strong, var, i, ol, ul, li, form, label, header, section,article,aside {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, footer, header, nav, section {
+    display: block;
+}
 
 /*--- Etoiles notation -----*/
 
@@ -99,6 +111,7 @@ p {
 }
 
 /*-- commun hebergements populaire et activités-----------*/
+
 .fiche_location, 
 .fiche_location_populaire, 
 .fiche_activites {
@@ -189,7 +202,6 @@ header > a:focus {
     outline: 0;
 }
 
-
 /*------navigation --------------*/
 
 nav ul {
@@ -224,6 +236,7 @@ nav a:focus {
     display: flex;
 }
 
+/* logo recherche ville --*/
 .chercher_ville {
     display: flex ;
     justify-content: center;
@@ -234,7 +247,6 @@ nav a:focus {
     border-bottom-left-radius: 10px;
     background-color: var(--gris);
 }
-
 
 .rechercher input[type="search"] {
     margin: 0;
@@ -257,7 +269,7 @@ nav a:focus {
     color: white;
     font-weight: bold;
     cursor: pointer;
-}
+  }
 
 .rechercher button:hover {
     box-shadow : 5px 5px 5px var(--bleuclair) inset;
@@ -267,7 +279,6 @@ nav a:focus {
     visibility: hidden;
     width: 0;
 }
-
 
 /*------------ section filtres par tendance -----------------*/
 
@@ -367,8 +378,6 @@ nav a:focus {
     border-radius: 25px;
 }
 
-
-
 /****---bloc location article hebergements + aside populaires ----*/
 
 #location {
@@ -376,7 +385,6 @@ nav a:focus {
 }
 
 /*------------ article hebergements -------------*/
-
 
 #hebergements {
     flex: 9;
@@ -428,7 +436,6 @@ nav a:focus {
     color: var(--bleu);
     font-style: oblique;
 }
-
 
 
 /*-- rubrique aside hebergements populaires ---*/
@@ -631,6 +638,7 @@ footer a:hover {
     font-size: 0.9rem;
 }
 
+/*-- pied de page Pour tres grand Ecran --*/
 @media only screen and (min-width: 1600px) 
 {
     .pied_page {
