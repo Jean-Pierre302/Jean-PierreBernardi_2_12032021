@@ -1,19 +1,23 @@
 /*8/5/21*/
-    
+    html, body { 
+        height: 100%; 
+        max-width: 100%; 
+        overflow-x: hidden;
+    }   
+
     section, article, aside {
     margin: 20px;
     padding: 0;
 }
-
 
 #location     {
     flex-direction: column;
 }
 
 #hebergements, #populaires, #activites {
+    padding: 20px;
     margin-left: 0;
     margin-right: 0;
-    padding: 20px;
     border-radius: 0;
 }
 
@@ -63,10 +67,15 @@
 
     
     nav li:nth-of-type(2) {
-    	margin-left: 20px;
-    	padding-left: 30px;
-    	
+    	margin: 0 3%;
+    	padding-left: 40px;
     }
+
+    nav li:nth-of-type(1) {
+        margin: 0 3%;
+        padding-left: 30px;
+    }
+    
 
     nav a     {
     	font-size: 1rem;
@@ -91,7 +100,7 @@
     header > a
     {
         margin-right: 20px;
-        max-width: 759px;
+        
         padding: 5px;
         align-self: center;
         text-align: right;
@@ -266,7 +275,7 @@
     {
         flex-direction: column;
         margin-left: -180px;
-        width: 350px;
+        max-width: 415px;
         margin-top:-40px;
     }
 
