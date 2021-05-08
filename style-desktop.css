@@ -1,4 +1,4 @@
-/*5/5/21*/
+/*8/5/21*/
 /*-------- charte graphique du site -----*/
 /*-- definition des variables couleurs --*/
 :root {
@@ -141,7 +141,7 @@ p {
 
 .prix span {
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 /*-- section Header de la page --*/
@@ -206,7 +206,6 @@ nav a:hover {
 }
 
 nav a:focus {
-    pointer-events:auto;
     outline-color: white;
     padding: 20px;
     border-top: 2px solid var(--bleu);
@@ -521,7 +520,6 @@ nav a:focus {
 
 .definition_activites> div:first-of-type> .fiche_activites:nth-of-type(1) {
     height: 190px;
-    marging-bottom:30px;  
 }
 
 .definition_activites> div:first-of-type> .fiche_activites:nth-of-type(2) {
@@ -554,7 +552,7 @@ nav a:focus {
 }
 
 .calanques {
-    height: 310px;
+    height: 320px;
      filter: brightness(1.4) contrast(90%);
 }
 
@@ -564,7 +562,7 @@ nav a:focus {
 }
 
 .longchamp {
-    height: 110px;
+    height: 120px;
 }
 
 .fiche_activites{
@@ -633,5 +631,50 @@ footer a:hover {
     font-size: 0.9rem;
 }
 
+@media only screen and (min-width: 1600px) 
+{
+    .pied_page {
+    width: 45%;
+    background-color: var(--gris);
+    margin-left:45rem;
+}
 
+footer {
+    margin: 0 auto;
+    padding: 35px 25px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 95%;
+    background-color: var(--gris);
+}
+
+footer div {
+    width: 50%;
+}
+
+footer li {
+    padding: 3px 0;
+    display:flex;
+    text-align: left;
+    margin-right:2rem;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+    font-size: 0.9rem;
+     
+}
+
+footer h3 {
+    color: black;
+    text-decoration: none;
+    display:flex;
+    text-align: left;
+    margin-right:3rem;
+    font-size: 1rem;
+     
+}
+
+}
 

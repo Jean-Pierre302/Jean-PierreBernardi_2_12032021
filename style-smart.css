@@ -1,9 +1,9 @@
-/*5/5/21*/
+/*8/5/21*/
     
     section, article, aside {
-        margin: 20px;
-        padding: 0;
-    }
+    margin: 20px;
+    padding: 0;
+}
 
 
 #location     {
@@ -82,7 +82,6 @@
     }
 
     nav a:active {
-        pointer-events:auto;
         padding-top: 0;
         border-top: initial;
         border-bottom: 3px solid var(--bleu);
@@ -133,7 +132,7 @@
         padding: 10px 16px;
     }
 
-    /*------------ section filtres par tendance -----------------*/
+    /*------------ filtres par tendance -----------------*/
 
     .filtres     {
         justify-content: flex-start;
@@ -161,7 +160,7 @@
         margin-bottom: -5px;
     }
 
-/*------- Rubrique Article Hebergements ----------*/
+/*------- Article Hebergements ----------*/
 
 #hebergements {
     margin-top: 0;
@@ -194,7 +193,7 @@
     padding: 20px 0;
 }
 
-/*------ Rubrique aside populaires ----------------*/
+/*------ aside populaires ----------------*/
 #populaires {
     margin-bottom: 0;
     order: 1;
@@ -219,10 +218,8 @@
 
 
 
-/*------ rubrique  article activites ------------ */
+/*------ article activites ------------*/
    
-}
-
 #activites {
     margin-top: 0;
     padding-top: 0;
@@ -246,12 +243,12 @@
 
 .fiche_activites > div{
 	height:100%;
-    margin: 10px 0;
+    margin: 5px 5px;
 }
 
 .fiche_activites .photos {
-    width: 330px;
-    height: 130px;   
+    width: 100%;
+    height: 130px;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
 
@@ -262,7 +259,7 @@
 
 }
 
-/*---------------- Pied de page -----------------*/ 
+/*---------------- footer -----------------*/ 
 
 
     footer
