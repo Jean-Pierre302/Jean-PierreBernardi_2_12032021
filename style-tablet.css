@@ -10,6 +10,12 @@
         order: 1;
     }
     
+    html, body { 
+        height: 100%; 
+        max-width: 100%; 
+        overflow-x: hidden; 
+    }
+
     header     {
         flex-wrap: wrap;
         justify-content: space-between;
@@ -46,19 +52,17 @@
         font-size: 1.1rem;
         padding-top: 0;
         padding-bottom: 20px;
-        border-bottom: 3px 3px solid var(--bleu);
     }
 
     nav a:hover  {
         padding-top: 0;
         border-top: initial;
-        border-bottom: 3px solid var(--bleu);
+        border: none;
+        font-size: 1.3rem;
     }
 
     nav a:active {
         padding-top: 0;
-        border-top: initial;
-        border-bottom: 3px solid var(--bleu);
         color: var(--bleu);
     } 
 
@@ -96,7 +100,7 @@ p {
     justify-content: space-around;
 }
 
-  
+/*-- Etoiles notation --*/  
 .fa-star {
     font-size: 0.6rem;
 }
@@ -109,7 +113,7 @@ p {
 .rechercher {
     display:flex;
     justify-content: center;
-    margin:25px 0;
+    margin:20px 0;
 }
 
 .filtres p {
@@ -125,6 +129,7 @@ p {
     cursor: pointer;
 }
 
+/** logos filtres --*/
 .filtres .fas {
     display: flex;
     justify-content: center;
@@ -147,7 +152,7 @@ p {
 
 .filtres span {
     margin-left: 5px;
-    padding: 5px 3px 0 20px;
+    padding: 5px 5px 0 20px;
     border-top: 5px solid var(--gris);
     border-right: 5px solid var(--gris);
     border-bottom: 5px solid var(--gris);
@@ -168,6 +173,7 @@ p {
     display:flex;
     justify-content: center;
 }
+
 #location     {
     flex-direction: column;
 }
