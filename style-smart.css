@@ -73,16 +73,9 @@
         text-align: center;
         
     }
-
-    nav li:nth-of-type(2) {
-        
-        margin-left:20px;
-        
-        
-    }
-    
+       
     nav li:nth-of-type(1) {
-    	margin-left: -30px;
+    	margin: 0;
         
     }
 
@@ -101,13 +94,7 @@
         border-bottom: 3px solid var(--bleu);
     }
 
-    nav a:active {
-        padding-top: 0;
-        border-top: initial;
-        border-bottom: 3px solid var(--bleu);
-        color: var(--bleu);
-    } 
-
+    
     header > a
     {
         margin-right: 20px;
