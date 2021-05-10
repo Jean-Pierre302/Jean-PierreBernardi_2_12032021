@@ -1,3 +1,361 @@
+/*10/5/21*/
+    html, body { 
+        height: 100%; 
+        max-width: 100%; 
+        padding:0;
+        margin:0;
+        overflow-x: hidden;
+    } 
+
+    .main
+{
+    margin: 0 auto;
+    max-width: 420px;}
+
+    section, article, aside {
+    margin: 20px;
+    padding: 0;
+}
+
+
+#location     {
+    flex-direction: column;
+}
+
+#hebergements, #populaires, #activites {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 20px;
+    border-radius: 0;
+}
+
+.fiche_location:hover, .fiche_location_populaire:hover, .fiche_activites:hover {
+    transform: initial;
+    box-shadow: rgba(177, 177, 177, 0.4) 2px 2px 7px;
+}
+
+.fiche_produit {
+    padding: 5px;
+}
+
+/*----------- section Header de la page -------------*/
+    
+    .logo     {
+        margin-top: 0;
+        margin-left: 20px;
+        margin-right: auto;
+        transform: scale(1.2);
+        order: 1;
+    }
+    
+    header     {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+    }
+    
+    
+    /*--------------- navigation ----------------------*/
+    nav    {
+        flex-basis: 100%;
+        margin-top: 25px;
+        width: 100%;
+        order: 3;
+    }
+
+    nav ul     {
+        margin: 0;      
+    }
+
+    nav li     {
+        width: 50%;
+        text-align: center;
+        
+    }
+
+    nav li:nth-of-type(2) {
+        
+        margin-left:20px;
+        
+        
+    }
+    
+    nav li:nth-of-type(1) {
+    	margin-left: -30px;
+        
+    }
+
+    nav a     {
+    	font-size: 1rem;
+        padding-top: 0;
+        padding-bottom: 10px;
+        margin:0;
+        border-bottom: 3px solid rgba(190,190,190,0.2);
+    }
+
+    nav a:hover  {
+        padding-top: 0;
+        border-top: initial;
+        padding-bottom: 10px;
+        border-bottom: 3px solid var(--bleu);
+    }
+
+    nav a:active {
+        padding-top: 0;
+        border-top: initial;
+        border-bottom: 3px solid var(--bleu);
+        color: var(--bleu);
+    } 
+
+    header > a
+    {
+        margin-right: 20px;
+        padding: 5px;     
+        font-size: 1rem;
+        letter-spacing:0.03rem;
+        order: 2;
+    }
+
+    h1{
+        font-size: 1.3rem;
+        letter-spacing:0.03rem;
+    }
+
+    h4{
+        font-size: 0.9rem;
+        letter-spacing:0.05rem;
+    }
+        
+    /*----------- section_recherche --------------- */
+
+    #section_recherche form    {
+        margin-top:40px;
+    }
+    
+    .rechercher input[type="search"] {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .rechercher button     {
+        padding: 8px;
+        margin-left: -6px;
+        border-radius: 15px;
+    }
+
+    .rechercher button span  {
+        display: none;
+    }
+
+    .bouton_rechercher   {
+        visibility: visible;
+        padding: 10px;
+        width: initial;
+    }
+
+    .chercher_ville   {
+        padding: 12px 15px;
+    }
+
+    /*------------ filtres par tendance -----------------*/
+
+    .filtres     {
+        justify-content: flex-start;
+    }
+
+    .filtres p     {
+        font-size: 1rem;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        padding: 0;
+        width: 100%;
+    }
+
+    .filtres label     {
+        margin: 12px 0;
+        margin-right: 20px;
+    }
+
+    
+    .filtres label:hover .fas     {
+        border-color: #deebff;
+        border:2px solid blue;
+    }
+    
+    .picto_info     {
+        margin-bottom: 10px;
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+        line-height: 1.2rem;
+
+    }
+
+    
+
+/*------- Article Hebergements ----------*/
+
+#hebergements {
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: initial;
+    order: 2;
+}
+
+#hebergements h2     {
+    margin-left: 0;
+    font-size: 1.3rem;
+
+}
+
+#hebergements > div     {
+    flex-direction: column;
+}
+
+.fiche_location     {
+    width:100%;
+    height: 195px;
+}
+
+.fiche_location .photos     {
+    height: 115px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+
+.afficher_plus {
+    padding: 20px 0;
+}
+
+/*------ aside populaires ----------------*/
+#populaires {
+    margin-bottom: 0;
+    order: 1;
+}
+
+.hebergements_populaires {
+    margin: 20px 0;
+}
+
+.fiche_location_populaire {
+    margin: 6px 0;
+    width: 100%;
+    height: 140px;
+}
+
+.fiche_location_populaire .photos{
+    padding: 2px 5px;
+    transform: scale(1.05);
+    width: 120px;
+    height:130px; 
+}
+
+
+
+/*------ article activites ------------*/
+   
+#activites {
+    margin-top: 0;
+    padding-top: 0;
+    height: 100%;
+}
+
+#activites h2{
+    font-size: 1.3rem;
+}
+
+.definition_activites {
+    flex-direction: column;
+    height:100%;
+}
+
+.definition_activites > a:first-of-type {
+    display:flex; 
+    margin-top:5px;
+}
+
+.definition_activites > a:last-of-type {
+    display:flex; 
+    margin-top:50px
+}
+
+.definition_activites > div:first-of-type {
+    margin-top: 20px; 
+    margin-bottom:10px;
+    margin-left:2px;
+    width: 100%;
+  
+}
+
+
+
+.definition_activites > div:last-of-type {
+    margin-top: 20px; 
+    margin-bottom:10px;
+    margin-left:2px;
+    width: 100%; 
+}
+
+.fiche_activites > div {
+	height:100%; 
+}
+
+
+.fiche_activites .photos {
+    width: 100%;
+    height: 135px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.fiche_activites > a {
+    height:100%;
+    margin: 5px 0;
+}
+
+.fiche_activites h3 {
+    padding: 5px 5px 5px 5px;
+    font-size: 1rem;
+}
+
+/*---------------- footer -----------------*/ 
+    footer     {
+        flex-direction: column;
+        margin-left: -180px;    
+        margin-top:-40px;
+        
+    }
+
+    footer div 
+    {
+        margin-top: 40px;
+        width: 350px;
+    }
+
+    footer div > h3 {
+        font-size: 1.1rem;
+        margin-bottom:10px;
+    }
+
+    footer a {
+        font-size: 1rem;
+    }
+    
+    footer ul {
+        margin-bottom:15px;
+    }
+
+
+
+
+
+
+
+
+
+
+
 /*9/5/21*/
     html, body { 
         height: 100%; 
