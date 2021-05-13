@@ -1,269 +1,647 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Reservia &#124; Location de vacances</title><!--8/5/21-->
-    <meta name="Description" content="Trouvez votre hébergement pour les vacances dans toutes les villes de France">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style-desktop.css" type="text/css"/><!--media query desktop ou laptop-->
-    <link rel="stylesheet" media="screen and (max-width: 759px)"  href="style-smart.css" type="text/css"/><!--media query smartphone--> 
-    <link rel="stylesheet" media="screen and (min-width: 760px) and (max-width: 1024px)" href="style-tablet.css" type="text/css"/><!--media query tablette-->
-    <script src="https://kit.fontawesome.com/6a824a900d.js" crossorigin="anonymous"></script><!-- utilisation des icones de la bibliothèque Font Font awesome -->
-</head>
+/*8/5/21*/
+/*-------- charte graphique du site -----*/
+/*-- definition des variables couleurs --*/
+:root {
+    --gris: #F2F2F2;
+    --bleu: #0065FC ;
+    --bleuclair: #DEEBFF;
+}
 
-<body>
-    <div class="main"><!-- Page Principale -->
-        <header><!-- section header de la page -->
-            <span><img class="logo" src="./images/logo/Reservia.svg" alt="logo Reservia"></span>
-            <nav>
-                <ul>
-                    <li><a href="#hebergements">H&eacute;bergements</a></li>
-                    <li><a href="#activites">Activit&eacute;s</a></li>
-                </ul>
-            </nav>
-            <a href="#">S'inscrire</a>
-        </header>
+/*------- définition de la police -------*/
+@font-face {
+    font-family: 'Raleway';
+    src: url(police/Raleway-Italic-VariableFont_wght.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
 
-        <section id="section_recherche"> 
-            <h1>Trouvez votre h&eacute;bergement pour des vacances de r&ecirc;ve</h1>
-            <h4>En plein centre ville ou en pleine nature</h4>
+@font-face {
+    font-family: 'Raleway_bold';
+    src: url(police/Raleway-VariableFont_wght.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
 
-            <form action="#" method="post">
-                <div class="rechercher"> <!-- rechercher ville -->
-                    <i class="fas fa-map-marker-alt chercher_ville"></i>
-                    <input type="search" name="search" placeholder="Marseille, France"  required/>
-                    <button type="submit"><span>Rechercher</span><i class="fas fa-search bouton_rechercher"></i></button>
-                </div>
-                <div class="filtres"> <!-- filtres par catégories -->
-                    <p>Filtres</p>
-                    <input type="checkbox" name="filter" id="economique">
-                    <label for="economique"><i class="fas fa-money-bill-wave"></i><span>&Eacute;conomique</span></label>
+/* Styles resets */
+html, body, div, span, h1, h2, h3, h4, p, a, em, img, strong, var, i, ol, ul, li, form, label, header, section,article,aside {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
 
-                    <input type="checkbox" name="filter" id="familial">
-                    <label for="familial"><i class="fas fa-child"></i><span>Familial</span></label>
+/* HTML5 display-role reset for older browsers */
+article, aside, footer, header, nav, section {
+    display: block;
+}
 
-                    <input type="checkbox" name="filter" id="romantique">
-                    <label for="romantique"><i class="fas fa-heart"></i><span>Romantique</span></label>
+/*--- Etoiles notation -----*/
 
-                    <input type="checkbox" name="filter" id="animaux">
-                    <label for="animaux"><i class="fas fa-dog"></i><span>Animaux autoris&eacute;s</span></label>
-                </div>
-            </form>
+.fa-star-shape {
+	 margin: 0 -1px;
+    font-size: .7rem;
+}
 
-            <p class="picto_info"><i class="fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
-        </section>
-        
-        <div id="location">
-            <article id="hebergements">
-                <h2>H&eacute;bergements &agrave; Marseille</h2>
-                <div>
-                    <a href="#" class="fiche_location">
-                        <img class="photos" src="./images/hebergements/Auberge_la_Cannebiere.jpg" alt="Auberge la Cannebi&egrave;re">
-                            <div class="fiche_produit"><h3><strong>Auberge la Cannebi&egrave;re</strong></h3>
-                                <p class="prix">Nuit &agrave; partir de <span>25&euro;</span></p>
-                                    <div>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu "></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-argent"></i>                               
-                                    </div>
-                            </div>
-                    </a>
+.fa-star-argent {
+    color: #D3D3D3;
+}
 
-                    <a href="#" class="fiche_location">
-                        <img class="photos" src="./images/hebergements/Hotel_du_port.jpg" alt="H&ocirc;tel du port">
-                            <div class="fiche_produit"><h3><strong>H&ocirc;tel du port</strong></h3>
-                                <p class="prix">Nuit &agrave; partir de <span>52&euro;</span></p>
-                                    <div>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu "></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                    </div>
-                            </div>
-                    </a>
-
-                    <a href="#" class="fiche_location">
-                        <img class="photos" src="./images/hebergements/Hotel_les_mouettes.jpg" alt="H&ocirc;tel les mouettes">
-                            <div class="fiche_produit"><h3><strong>H&ocirc;tel les mouettes</strong></h3>
-                                <p class="prix">Nuit &agrave; partir de <span>76&euro;</span></p>
-                                    <div>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu "></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-argent"></i>
-                                    </div>                                 
-                            </div>
-                    </a>
-
-                    <a href="#" class="fiche_location">
-                        <img class="photos" src="./images/hebergements/Hotel_de_la_mer.jpg" alt="H&ocirc;tel de la mer">
-                            <div class="fiche_produit"><h3><strong>H&ocirc;tel de la mer</strong></h3>
-                                <p class="prix">Nuit &agrave; partir de <span>46&euro;</span></p>
-                                    <div>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu "></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-argent"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-argent"></i>
-                                    </div>
-                            </div>
-                    </a>
-                                    
-                    <a href="#" class="fiche_location">
-                        <img class="photos" src="./images/hebergements/Auberge_le_Panier.jpg" alt="Auberge le Panier">
-                            <div class="fiche_produit"><h3><strong>Auberge le Panier</strong></h3>
-                                <p class="prix">Nuit &agrave; partir de <span>23&euro;</span></p>
-                                    <div>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu "></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-argent"></i>
-                                    </div>
-                            </div>
-                    </a>
-
-                    <a href="#" class="fiche_location">
-                        <img class="photos" src="./images/hebergements/Hotel_chez_Amina.jpg" alt="H&ocirc;tel chez Amina">
-                            <div class="fiche_produit"><h3><strong>H&ocirc;tel chez Amina</strong></h3>
-                                <p class="prix">Nuit &agrave; partir de <span>96&euro;</span></p>
-                                    <div>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu "></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                    </div>
-                            </div>
-                    </a>
-                </div>
-              <strong><a href="#" class="afficher_plus">Afficher plus</a></strong>  
-        </article>
-
-        <aside id="populaires">
-            <div class="hebergements_populaires"><h2>Les plus populaires</h2><i class="fas fa-chart-line"></i></div>
-                <div class="classement_populaire">
-                    <a href="#" class="fiche_location_populaire">
-                        <img class="photos" src="./images/hebergements/Hotel_le_soleil_du_matin.jpg" alt="H&ocirc;tel Le soleil du matin">
-                        <div class="fiche_produit"><h3><strong>H&ocirc;tel Le soleil du matin</strong></h3>
-                            <p class="prix">Nuit &agrave; partir de <span>128&euro;</span></p>
-                            <div>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#" class="fiche_location_populaire">
-                        <img class="photos" src="./images/hebergements/Au_coeur_de_l'eau_chambres_d'hotes.jpg" alt="Au coeur de l'eau Chambres d'h&ocirc;tes">
-                        <div class="fiche_produit"><h3><strong>Au coeur de l'eau Chambres d'h&ocirc;tes</strong></h3>
-                            <p class="prix">Nuit &agrave; partir de <span>71&euro;</span></p>
-                            <div>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-argent"></i>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="fiche_location_populaire">
-                        <img class="photos" src="images/hebergements/Hotel_tout_bleu_et_blanc.jpg" alt="H&ocirc;tel Tout bleu et blanc">
-                        
-                        <div class="fiche_produit"><h3><strong>H&ocirc;tel Tout bleu et blanc</strong></h3>
-                            <p class="prix">Nuit &agrave; partir de <span>68&euro;</span></p>
-                            <div>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-bleu"></i>
-                                        <i class="fas fa-star fa-star-shape fa-star-argent"></i>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-           
-        </aside>
-    </div>
-
-        
-    <article id="activites">
-            <h2>Activit&eacute;s &agrave; Marseille</h2>
-               <div>
-               <div class="definition_activites">
-                    <a href="#" class="fiche_activites">
-                        <div class="port"><img class="photos" src= "./images/activites/Vieux_Port.jpg" alt="Vieux port"></div>
-                            <h3>Vieux Port</h3>
-                    </a>
-            
-            <div>
-                <a href="#" class="fiche_activites">
-                    <div class="pomegues"><img class="photos" src="./images/activites/Fort_de_Pomegues.jpg"  alt="Fort de Pom&egrave;gues" ></div>
-                            <h3>Fort de Pom&egrave;gues</h3>
-                </a>
-                
-                <a href="#" class="fiche_activites">
-                    <div class="frioul"><img class="photos" src="./images/activites/Iles_du_Frioul.jpg"  alt="&Icirc;les du Frioul"></div>
-                        <h3>&Icirc;les du Frioul</h3>
-                </a>
-            </div>
-                
-                <a href="#" class="fiche_activites">
-                    <div class="calanques"><img class="photos" src="./images/activites/Parc_national_des_Calanques.jpg"  alt="Parc National des Calanques" ></div>
-                        <h3>Parc National des Calanques</h3>
-                </a>
-            <div>
-                <a href="#" class="fiche_activites">
-                    <div class="garde"><img class="photos" src="./images/activites/Notre_Dame_de_Lagarde.jpg" alt="Notre-Dame-de-la-Garde" ></div>
-                        <h3>Notre-Dame-de-la-Garde</h3>
-                </a>
-            
-                <a href="#" class="fiche_activites">
-                    <div class="longchamp"><img class="photos" src="./images/activites/Parc_Longchamp.jpg"  alt="Parc Longchamp"></div>
-                        <h3>Parc Longchamp</h3>
-                </a>
-
-            </div>
-        </div>
-    </div>
-    </article>
+.fa-star-bleu {
+    color: var(--bleu);
+}
 
 
-<div class="pied_page">
-        <footer>
-            <div>
-                <h3>A propos</h3>
-                <ul>
-                    <li><a href="#">Fonctionnement du site</a></li>
-                    <li><a href="#">Conditions g&eacute;n&eacute;rales de vente</a></li>
-                    <li><a href="#">Donn&eacute;es et confidentialit&eacute;</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3>Nos h&eacute;bergements</h3>
-                <ul>
-                    <li><a href="#">Charte qualit&eacute;</a></li>
-                    <li><a href="#">Soumettre votre H&ocirc;tel</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3>Assistance</h3>
-                <ul>
-                    <li><a href="#">Centre d'aide</a></li>
-                    <li><a href="#">Nous contacter</a></li>
-                </ul>
-            </div>
-        </footer>
-    </div>
-</div>
+/*-- Paramétres généraux principales balises --*/
 
-</body>
-</html>
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body 
+{
+    font-family: 'Raleway';
+    font-size: 14px;
+    overflow-x: hidden;
+   }
+
+.main
+{
+    margin: 0 auto;
+    max-width: 1150px;
+}
+
+section, article, aside {
+    margin: 20px 35px;
+}
+
+h1 {
+    font-size: 1.1rem;
+    font-family: 'Raleway_bold';
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: 'Raleway_bold';
+    font-size: 1.2rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-family: 'Raleway_bold';
+    line-height: 1rem
+}
+
+strong {
+    font-size: 0.9rem;
+    font-family: 'Raleway_bold';
+    line-height: 1rem
+}
+
+span {
+    font-size: 0.9rem;
+    font-family: 'Raleway';
+    line-height: 0.9rem
+}
+
+p {
+    font-size: 0.7rem;
+    font-style: oblique;
+    letter-spacing:0.1em;
+}
+
+/*-- commun hebergements populaire et activités-----------*/
+
+.fiche_location, 
+.fiche_location_populaire, 
+.fiche_activites {
+    display: flex;
+    padding: 5px;
+    box-shadow: 2px 2px 7px rgba(177, 177, 177, 0.4);
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    transition: .2s;
+
+}
+
+.fiche_location:hover, 
+.fiche_location_populaire:hover, 
+.fiche_activites:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 7px rgba(177, 177, 177, 0.2);
+}
+
+.photos { 
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.fiche_produit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5px 0 2px 0;
+}
+
+.fiche_produit > * {
+    padding: 2px 5px;
+}
+
+
+.prix span {
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+/*-- section Header de la page --*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+/*---- logo du site Reservia --*/
+
+
+.logo {
+      margin: 20px auto 2px 25px;
+      height:35px;
+      width: 95px;
+}
+
+header a {
+    display: block;
+    margin-right: 45px;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    color: black;
+    text-decoration: none;
+    transition: color .5s;
+    
+}
+
+header > a {
+    margin-right: 70px;
+    font-weight: bold;
+    color: var(--bleu);
+}
+
+header > a:hover {
+    color: var(--bleu);
+    font-style:oblique;
+    font-size: 0.9rem;
+}
+
+header > a:focus {
+    pointer-events:none;
+    outline: 0;
+}
+
+/*------navigation --------------*/
+
+nav ul {
+    display: flex;
+    margin-left: 610px;
+    height: 100%;
+    list-style-type: none;
+}
+
+nav a:hover {
+    padding: 20px;
+    border-top: 2px solid var(--bleu);
+    color: var(--bleu);
+}
+
+nav a:focus {
+    outline-color: white;
+    padding: 20px;
+    border-top: 2px solid var(--bleu);
+    color: var(--bleu);
+}
+
+/*------------- section_recherche -------------- */
+
+#section_recherche form {
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.rechercher {
+    margin: 10px 0;
+    display: flex;
+}
+
+/* logo recherche ville --*/
+.chercher_ville {
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 13px;
+    border: 1px solid var(--gris);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: var(--gris);
+}
+
+.rechercher input[type="search"] {
+    margin: 0;
+    padding: 10px;
+    border-top: 1px solid var(--gris);
+    border-right: 0;
+    border-bottom: 1px solid var(--gris);
+    border-left: 0;
+    font-weight: bold;
+    background-position: 0 -1.7em;
+    
+}
+
+.rechercher button {
+    padding: 10px 15px;
+    background-color: var(--bleu);
+    border: 1px solid var(--bleu);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+.rechercher button:hover {
+    box-shadow : 5px 5px 5px var(--bleuclair) inset;
+}
+
+.bouton_rechercher { /* cacher bouton de recherche smartphone */
+    visibility: hidden;
+    width: 0;
+}
+
+/*------------ section filtres par tendance -----------------*/
+
+.filtres input[type="checkbox"] {
+    display: none;
+}
+
+.filtres {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filtres p {
+    padding-right: 15px;
+}
+
+.filtres label {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.filtres .fas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -20px;
+    width: 46px;
+    height: 46px;
+    border: 2px solid var(--bleuclair);
+    border-radius: 25px;
+    color: var(--bleu);
+    background-color: var(--bleuclair);
+    transition: .1s;
+    z-index: 2;
+}
+
+.filtres label:hover .fas {
+    border-color: var(--gris);
+}
+
+.filtres input[type="checkbox"]:checked + label > .fas {
+    color: var(--bleuclair);
+    border-color: var(--bleu);
+    background-color: var(--bleu);
+}
+
+.filtres span {
+    padding: 10px 20px 10px 30px;
+    border-top: 2px solid var(--gris);
+    border-right: 2px solid var(--gris);
+    border-bottom: 2px solid var(--gris);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    line-height: 1.4rem;
+    z-index: 1;
+    user-select: none; 
+}
+
+.filtres span:hover {
+    background-color: var(--bleuclair);
+    border-top: 2px solid var(--gris);
+    border-right: 2px solid var(--gris);
+    border-bottom: 2px solid var(--gris);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    color: var(--bleu);
+}
+
+.filtres input[type="checkbox"]:checked + label > span {
+    background-color: var(--bleu);
+    color: var(--bleuclair);
+    border-color: var(--bleu);
+}
+
+/*----- picto_info  ----------*/
+
+.picto_info {
+    display: flex;
+    align-items: center;
+}
+
+.picto_info .fa-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    color: var(--bleu);
+    opacity:0.4;
+    font-size: 0.8rem;
+    border: 2px solid var(--gris);
+    border-radius: 25px;
+}
+
+/****---bloc location article hebergements + aside populaires ----*/
+
+#location {
+    display: flex;
+}
+
+/*------------ article hebergements -------------*/
+
+#hebergements {
+    flex: 9;
+    border-radius: 10px;
+    background-color: var(--gris);
+}
+
+#hebergements h2 {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+}
+
+#hebergements > div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.fiche_location {
+    flex-direction: column;
+    position: relative;
+    margin: 15px 0px;
+    width: 190px;
+    height: 160px;
+}
+
+
+.fiche_location .photos {
+    flex: 1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/*---plus de selection --------*/
+
+.afficher_plus {
+    display: inline-block;
+    margin-right: auto;
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    transition: .2s;
+}
+
+.afficher_plus:hover {
+    color: var(--bleu);
+    font-style: oblique;
+}
+
+
+/*-- rubrique aside hebergements populaires ---*/
+
+#populaires {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--gris);
+}
+
+.hebergements_populaires {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.hebergements_populaires .fas {
+    font-size: 1.20rem;
+}
+
+.classement_populaire {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.fiche_location_populaire  {
+    height: 120px;
+    margin: 15px;
+    margin-bottom:10px;
+
+}
+
+.fiche_location_populaire .photos {
+    flex: 2;
+    height: 110px;
+    width: 100px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.fiche_location_populaire .fiche_produit {
+    flex: 3;
+    padding: 5px 10px;
+}
+
+.fiche_location_populaire .prix {
+    margin-bottom: auto;
+}
+
+/*----------- rubrique article activités---------*/
+    
+#activites {
+    margin-bottom: 10px;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#activites h2 {
+    margin: 20px 0;
+}
+
+.definition_activites {
+    margin-top: 20px;
+    display: flex;
+    height: 370px;
+}
+
+.definition_activites> a{
+    flex: 1;
+}
+
+.definition_activites > a:first-of-type {
+    height: 370px;
+}
+
+
+.definition_activites> div {
+    margin: 0 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.definition_activites> div:first-of-type> .fiche_activites:nth-of-type(1) {
+    height: 190px;
+}
+
+.definition_activites> div:first-of-type> .fiche_activites:nth-of-type(2) {
+    height: 150px;
+    margin-top:30px;  
+}
+
+.definition_activites > div:last-of-type {
+    margin-right: 0;
+    
+}
+
+.definition_activites > div:last-of-type> .fiche_activites:not(:first-of-type) {
+    margin-top: 30px;
+    
+}
+
+.port {
+   height:320px; 
+   }
+
+.pomegues {
+    height: 140px;
+    
+}
+
+.frioul {
+    height: 100px;
+    
+}
+
+.calanques {
+    height: 320px;
+     filter: brightness(1.4) contrast(90%);
+}
+
+.garde {
+    height: 120px;
+   
+}
+
+.longchamp {
+    height: 120px;
+}
+
+.fiche_activites{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    flex-direction: column;
+}
+
+.fiche_activites .photos {
+    width: 100%;
+    height:100%; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+.fiche_activites h3 {
+    padding: 15px;
+    font-size: 0.8rem;
+    
+}
+
+/*-------------- Footer --------------------*/
+
+.pied_page + footer{
+    position:absolute;
+    background-color: var(--gris);
+    margin-top: 2rem;
+    padding-right:41rem;
+    border:2px solid blue;
+}
+
+
+
+footer {
+    margin: 0 auto;
+    padding: 35px 25px;
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    background-color: var(--gris);
+}
+
+
+
+footer div {
+    width: 30%;
+    
+}
+
+footer ul {
+    padding: 10px 0;
+    list-style-type: none;
+}
+
+footer li {
+    padding: 5px 0;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+footer a:hover {
+    color: var(--bleu);
+    font-style: oblique;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+
+
