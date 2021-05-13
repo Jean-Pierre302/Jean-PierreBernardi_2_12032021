@@ -595,18 +595,22 @@ nav a:focus {
 
 /*-------------- Footer --------------------*/
 
-.pied_page {
-    width: 76%;
+.pied_page + footer{
+    position:absolute;
     background-color: var(--gris);
-    margin: 40px 200px 0 180px;
+    margin-top: 2rem;
+    padding-right:41rem;
+    border:2px solid blue;
 }
+
+
 
 footer {
     margin: 0 auto;
     padding: 35px 25px;
     display: flex;
-    justify-content: space-between;
-    max-width: 95%;
+    justify-content: space-around;
+    max-width: 100%;
     background-color: var(--gris);
 }
 
@@ -614,6 +618,7 @@ footer {
 
 footer div {
     width: 30%;
+    
 }
 
 footer ul {
@@ -638,51 +643,5 @@ footer a:hover {
     font-size: 0.9rem;
 }
 
-/*-- pied de page Pour tres grand Ecran --*/
-@media only screen and (min-width: 1600px) 
-{
-    .pied_page {
-    width: 45%;
-    background-color: var(--gris);
-    margin-left:45rem;
-}
 
-footer {
-    margin: 0 auto;
-    padding: 35px 25px;
-    display: flex;
-    justify-content: space-between;
-    max-width: 95%;
-    background-color: var(--gris);
-}
-
-footer div {
-    width: 50%;
-}
-
-footer li {
-    padding: 3px 0;
-    display:flex;
-    text-align: left;
-    margin-right:2rem;
-}
-
-footer a {
-    color: black;
-    text-decoration: none;
-    font-size: 0.9rem;
-     
-}
-
-footer h3 {
-    color: black;
-    text-decoration: none;
-    display:flex;
-    text-align: left;
-    margin-right:3rem;
-    font-size: 1rem;
-     
-}
-
-}
 
